@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+---
+
+<section id="about" class="py-20 sm:py-28 bg-white dark:bg-bg-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div data-aos="fade-up" class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark dark:text-dark-text">About B-Open</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+      <p class="mt-6 text-lg text-gray-text dark:text-gray-dark leading-relaxed">
+        We are a passionate team of developers, designers, and visionaries dedicated to crafting exceptional software experiences. From startups to enterprises, we help businesses transform their ideas into powerful digital products.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div data-aos="fade-up" data-aos-delay="200" class="bg-bg dark:bg-card-dark rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 transition-all border border-primary/10 dark:border-white/5 group cursor-pointer">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+          <Icon name="ph:monitor" class="w-7 h-7 text-primary" />
+        </div>
+        <h3 class="text-xl font-bold text-dark dark:text-dark-text mb-3">Web Development</h3>
+        <p class="text-gray-text dark:text-gray-dark leading-relaxed">
+          Modern, responsive, and high-performance web applications using cutting-edge technologies.
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="400" class="bg-bg dark:bg-card-dark rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 transition-all border border-primary/10 dark:border-white/5 group cursor-pointer">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+          <Icon name="ph:device-mobile" class="w-7 h-7 text-primary" />
+        </div>
+        <h3 class="text-xl font-bold text-dark dark:text-dark-text mb-3">Mobile Apps</h3>
+        <p class="text-gray-text dark:text-gray-dark leading-relaxed">
+          Cross-platform mobile applications that deliver native-like experiences on any device.
+        </p>
+      </div>
+
+      <div data-aos="fade-up" data-aos-delay="600" class="bg-bg dark:bg-card-dark rounded-2xl p-8 hover:shadow-lg hover:shadow-primary/10 transition-all border border-primary/10 dark:border-white/5 group cursor-pointer">
+        <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary/20 transition-colors">
+          <Icon name="ph:shield-check" class="w-7 h-7 text-primary" />
+        </div>
+        <h3 class="text-xl font-bold text-dark dark:text-dark-text mb-3">Quality Assurance</h3>
+        <p class="text-gray-text dark:text-gray-dark leading-relaxed">
+          Comprehensive testing and quality assurance to ensure your software is reliable and robust.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

@@ -12,6 +12,11 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^7.1.5"
+    "@iconify-json/ph": "^1.2.2",
+    "@tailwindcss/vite": "^4.3.3",
+    "aos": "^2.3.4",
+    "astro": "^7.1.5",
+    "astro-icon": "^1.1.5",
+    "tailwindcss": "^4.3.3"
   }
 }

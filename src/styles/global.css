@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "aos/dist/aos.css";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #5dc691;
+  --color-primary-dark: #4db07a;
+  --color-primary-light: #7dd4a5;
+  --color-secondary: #4db8a0;
+  --color-accent: #6dcf84;
+  --color-light: #a8e0c8;
+  --color-bg: #e8f8ef;
+  --color-bg-dark: #0a1410;
+  --color-surface-dark: #122218;
+  --color-card-dark: #1a2e24;
+  --color-dark: #1a3a2a;
+  --color-dark-text: #e2e8f0;
+  --color-gray-text: #4a5568;
+  --color-gray-dark: #94a3b8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark body,
+body.dark {
+  background-color: var(--color-bg-dark);
+  color: var(--color-dark-text);
+}
+
+.dark .aos-init:not(.aos-animate) {
+  opacity: 0;
+}

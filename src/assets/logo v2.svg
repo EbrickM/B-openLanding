@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="726.5" height="291" viewBox="0 0 726.5 291">
+  <g id="Capa_2" data-name="Capa 2">
+    <g id="Capa_1-2" data-name="Capa 1">
+      <circle cx="21.75" cy="77.18" r="21.75" fill="#5dc691"/>
+      <circle cx="21.75" cy="158.18" r="21.75" fill="#5dc691"/>
+      <rect x="49.39" y="68.82" width="62.11" height="16.83" rx="8.42" fill="#5dc691"/>
+      <rect x="49.39" y="150.08" width="62.11" height="16.83" rx="8.42" fill="#5dc691"/>
+      <path d="M213.78,113.25a67,67,0,1,1-100.78,88V25.21a67,67,0,1,1,100.78,88Z" fill="#5dc691"/>
+      <path d="M165.6,115.72c-.65,21,44.28,33.63,39.64,46.54-4.48,12.49-27.14,22.07-52.57,14.66Q150.09,108,147.5,39c50.2,11.37,65.28,22,65.5,31C213.4,86.13,166.27,93.92,165.6,115.72Z" fill="#fff"/>
+      <text transform="translate(232.63 154.54)" font-size="158" fill="#1d1d1b" font-family="Agenda-Black, Agenda" font-weight="800">open</text>
+      <polyline points="636.5 93.25 689.93 124.03 634.96 143.84" fill="none" stroke="#5dc691" stroke-linecap="round" stroke-linejoin="round" stroke-width="25"/>
+      <line x1="612.91" y1="76.75" x2="596.54" y2="158" fill="#1d1d1b" stroke="#5dc691" stroke-linecap="round" stroke-miterlimit="10" stroke-width="25"/>
+    </g>
+  </g>
+</svg>

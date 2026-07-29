@@ -1,0 +1,61 @@
+---
+import logo from '../assets/logo v2.svg';
+import { Icon } from 'astro-icon/components';
+---
+
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-primary/10 dark:border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="/" class="flex items-center">
+        <img src={logo.src} alt="B-Open" class="h-14 w-auto" />
+      </a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#hero" class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Home</a>
+        <a href="#about" class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">About</a>
+        <a href="#projects" class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Projects</a>
+        <a href="#contact" class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Contact</a>
+        <button id="theme-toggle" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors" aria-label="Toggle theme">
+          <Icon name="ph:sun" class="w-5 h-5 hidden dark:block" />
+          <Icon name="ph:moon" class="w-5 h-5 block dark:hidden" />
+        </button>
+        <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full transition-colors font-medium">Get in Touch</a>
+      </div>
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors" aria-label="Toggle theme">
+          <Icon name="ph:sun" class="w-5 h-5 hidden dark:block" />
+          <Icon name="ph:moon" class="w-5 h-5 block dark:hidden" />
+        </button>
+        <button id="menu-btn" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors">
+          <Icon name="ph:list" class="w-6 h-6" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-surface-dark border-t border-primary/10 dark:border-white/10">
+    <div class="px-4 py-4 space-y-3">
+      <a href="#hero" class="block text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Home</a>
+      <a href="#about" class="block text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">About</a>
+      <a href="#projects" class="block text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Projects</a>
+      <a href="#contact" class="block text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-medium">Contact</a>
+      <a href="#contact" class="block text-center bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full transition-colors font-medium">Get in Touch</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const toggleTheme = () => {
+    const html = document.documentElement;
+    html.classList.toggle('dark');
+    localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+  };
+
+  document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(btn => {
+    btn?.addEventListener('click', toggleTheme);
+  });
+
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuBtn?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

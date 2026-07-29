@@ -1,0 +1,72 @@
+---
+import proyectoTropical from '../assets/Tropical Moving Solutions.webp';
+import proyectoSelenium from '../assets/Selenium.webp';
+import proyectoCiencia from '../assets/Ciencia en Cuba.webp';
+import proyectoBonafide from '../assets/Bonafide.webp';
+
+const projects = [
+  {
+    title: 'Tropical Moving Solutions',
+    description: 'A complete digital platform for a moving company with online quotes, scheduling, and real-time tracking.',
+    image: proyectoTropical,
+    tags: ['React', 'Node.js', 'MongoDB'],
+  },
+  {
+    title: 'Selenium Testing Platform',
+    description: 'An automated testing framework and dashboard for managing Selenium test suites across multiple environments.',
+    image: proyectoSelenium,
+    tags: ['Python', 'Selenium', 'Docker'],
+  },
+  {
+    title: 'Ciencia en Cuba',
+    description: 'A scientific research portal connecting Cuban researchers with international collaborators and funding opportunities.',
+    image: proyectoCiencia,
+    tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
+  },
+  {
+    title: 'Bonafide',
+    description: 'A verification and authentication system for professional credentials and certifications.',
+    image: proyectoBonafide,
+    tags: ['Next.js', 'TypeScript', 'AWS'],
+  },
+];
+---
+
+<section id="projects" class="py-20 sm:py-28 bg-bg dark:bg-surface-dark">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div data-aos="fade-up" class="text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl sm:text-4xl font-bold text-dark dark:text-dark-text">Our Projects</h2>
+      <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
+      <p class="mt-6 text-lg text-gray-text dark:text-gray-dark leading-relaxed">
+        Take a look at some of the projects we've delivered. Each one represents our commitment to quality and innovation.
+      </p>
+    </div>
+
+    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+      {projects.map((project, index) => (
+        <div
+          data-aos="fade-up"
+          data-aos-delay={200 * (index + 1)}
+          class="group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-primary/10 dark:border-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all cursor-pointer"
+        >
+          <div class="overflow-hidden">
+            <img
+              src={project.image.src}
+              alt={project.title}
+              class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-dark dark:text-dark-text mb-2">{project.title}</h3>
+            <p class="text-gray-text dark:text-gray-dark mb-4 leading-relaxed">{project.description}</p>
+            <div class="flex flex-wrap gap-2">
+              {project.tags.map((tag) => (
+                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+              ))}
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

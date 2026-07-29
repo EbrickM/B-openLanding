@@ -1,3 +1,6 @@
+---
+import '../styles/global.css';
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -5,19 +8,37 @@
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>B-Open - Software Development</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+<script>
+	import AOS from 'aos';
+
+	const html = document.documentElement;
+	const stored = localStorage.getItem('theme');
+
+	if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+		html.classList.add('dark');
+	} else {
+		html.classList.remove('dark');
 	}
-</style>
+
+	document.addEventListener('astro:after-swap', () => {
+		AOS.refresh();
+	});
+
+	AOS.init({
+		duration: 800,
+		easing: 'ease-in-out',
+		once: true,
+		mirror: false,
+	});
+</script>
