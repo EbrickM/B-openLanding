@@ -32,37 +32,38 @@ const projects = [
 ];
 ---
 
-<section id="projects" class="py-20 sm:py-28 bg-bg dark:bg-surface-dark">
+<section id="projects" class="py-16 sm:py-20 lg:py-28 bg-bg dark:bg-surface-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div data-aos="fade-up" class="text-center max-w-3xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-bold text-dark dark:text-dark-text">Our Projects</h2>
-      <div class="w-20 h-1 bg-primary mx-auto mt-4 rounded-full"></div>
-      <p class="mt-6 text-lg text-gray-text dark:text-gray-dark leading-relaxed">
+    <div data-aos="fade-up" class="text-center max-w-3xl mx-auto px-2 sm:px-0">
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-dark dark:text-dark-text">Our Projects</h2>
+      <div class="w-16 sm:w-20 h-1 bg-primary mx-auto mt-3 sm:mt-4 rounded-full"></div>
+      <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed">
         Take a look at some of the projects we've delivered. Each one represents our commitment to quality and innovation.
       </p>
     </div>
 
-    <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="mt-12 sm:mt-16 grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
       {projects.map((project, index) => (
         <div
           data-aos="fade-up"
-          data-aos-delay={200 * (index + 1)}
-          class="group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-primary/10 dark:border-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all cursor-pointer"
+          data-aos-delay={150 * (index + 1)}
+          class="group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-primary/10 dark:border-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all cursor-pointer flex flex-col"
         >
-          <div class="overflow-hidden">
+          <div class="overflow-hidden aspect-[16/10] sm:aspect-[16/9]">
             <img
               src={project.image.src}
               alt={project.title}
               loading="lazy"
-              class="w-full h-56 object-cover group-hover:scale-110 transition-transform duration-500"
+              decoding="async"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
           </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-dark dark:text-dark-text mb-2">{project.title}</h3>
-            <p class="text-gray-text dark:text-gray-dark mb-4 leading-relaxed">{project.description}</p>
-            <div class="flex flex-wrap gap-2">
+          <div class="p-5 sm:p-6 flex flex-col flex-1">
+            <h3 class="text-lg sm:text-xl font-bold text-dark dark:text-dark-text mb-2">{project.title}</h3>
+            <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark mb-4 leading-relaxed flex-1">{project.description}</p>
+            <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
               {project.tags.map((tag) => (
-                <span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full">{tag}</span>
+                <span class="bg-primary/10 text-primary text-xs sm:text-sm font-medium px-2.5 sm:px-3 py-1 rounded-full">{tag}</span>
               ))}
             </div>
           </div>

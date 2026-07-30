@@ -5,7 +5,9 @@ import '../styles/global.css';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+		<meta name="description" content="B-Open - Software Development company specialized in creating modern, scalable, and high-performance web applications." />
+		<meta name="theme-color" content="#5dc691" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,6 +17,9 @@ import '../styles/global.css';
 		<title>B-Open - Software Development</title>
 	</head>
 	<body>
+		<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-primary focus:text-white focus:rounded-lg">
+			Skip to main content
+		</a>
 		<slot />
 	</body>
 </html>
@@ -35,10 +40,14 @@ import '../styles/global.css';
 		AOS.refresh();
 	});
 
+	const isMobile = window.innerWidth < 768;
+
 	AOS.init({
-		duration: 600,
+		duration: isMobile ? 400 : 600,
 		easing: 'ease-in-out',
 		once: true,
 		mirror: false,
+		disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+		startEvent: 'DOMContentLoaded',
 	});
 </script>

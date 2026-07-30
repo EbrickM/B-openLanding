@@ -10,13 +10,13 @@ import Footer from '../components/Footer.astro';
 
 <Layout>
   <Navbar />
-  <main>
+  <main id="main-content">
     <HeroSection />
-    <div class="h-24 -mt-12 relative z-10 bg-gradient-to-b from-transparent to-white dark:to-bg-dark backdrop-blur-[0.5px]"></div>
+    <div class="h-16 sm:h-24 -mt-8 sm:-mt-12 relative z-10 bg-gradient-to-b from-transparent to-white dark:to-bg-dark backdrop-blur-[0.5px]"></div>
     <CompanyInfo />
-    <div class="h-24 -mt-12 relative z-10 bg-gradient-to-b from-white to-bg dark:from-bg-dark dark:to-surface-dark backdrop-blur-[0.5px]"></div>
+    <div class="h-16 sm:h-24 -mt-8 sm:-mt-12 relative z-10 bg-gradient-to-b from-white to-bg dark:from-bg-dark dark:to-surface-dark backdrop-blur-[0.5px]"></div>
     <ProjectsSection />
-    <div class="h-24 -mt-12 relative z-10 bg-gradient-to-b from-bg to-white dark:from-surface-dark dark:to-bg-dark backdrop-blur-[0.5px]"></div>
+    <div class="h-16 sm:h-24 -mt-8 sm:-mt-12 relative z-10 bg-gradient-to-b from-bg to-white dark:from-surface-dark dark:to-bg-dark backdrop-blur-[0.5px]"></div>
     <ContactSection />
   </main>
   <Footer />

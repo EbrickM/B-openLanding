@@ -3,7 +3,15 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
+@layer base {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
 @theme {
+  --breakpoint-xs: 420px;
   --color-primary: #5dc691;
   --color-primary-dark: #4db07a;
   --color-primary-light: #7dd4a5;
@@ -22,11 +30,14 @@
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .dark body,
@@ -37,4 +48,32 @@ body.dark {
 
 .dark .aos-init:not(.aos-animate) {
   opacity: 0;
+}
+
+@media (max-width: 420px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

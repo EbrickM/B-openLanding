@@ -2,52 +2,52 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<section id="contact" class="py-20 sm:py-28 bg-white dark:bg-bg-dark">
+<section id="contact" class="py-16 sm:py-20 lg:py-28 bg-white dark:bg-bg-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-      <div data-aos="fade-right">
-        <h2 class="text-3xl sm:text-4xl font-bold text-dark dark:text-dark-text">Get in Touch</h2>
-        <div class="w-20 h-1 bg-primary mt-4 rounded-full"></div>
-        <p class="mt-6 text-lg text-gray-text dark:text-gray-dark leading-relaxed">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
+      <div data-aos="fade-up" data-aos-duration="500">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-dark dark:text-dark-text px-2 sm:px-0">Get in Touch</h2>
+        <div class="w-16 sm:w-20 h-1 bg-primary mt-3 sm:mt-4 rounded-full"></div>
+        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed px-2 sm:px-0">
           Have a project in mind? Let's talk about it. We'd love to hear from you and discuss how we can help bring your ideas to life.
         </p>
 
-        <div class="mt-10 space-y-6">
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-              <Icon name="ph:envelope" class="w-6 h-6 text-primary" />
+        <div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6 px-2 sm:px-0">
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+              <Icon name="ph:envelope" class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
             </div>
-            <div>
-              <h4 class="font-semibold text-dark dark:text-dark-text">Email</h4>
-              <p class="text-gray-text dark:text-gray-dark">hello@b-open.dev</p>
-            </div>
-          </div>
-
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-              <Icon name="ph:map-pin" class="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h4 class="font-semibold text-dark dark:text-dark-text">Location</h4>
-              <p class="text-gray-text dark:text-gray-dark">Available remotely — we work with clients worldwide</p>
+            <div class="min-w-0">
+              <h4 class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">Email</h4>
+              <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark break-all">hello@b-open.dev</p>
             </div>
           </div>
 
-          <div class="flex items-start gap-4">
-            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
-              <Icon name="ph:phone-call" class="w-6 h-6 text-primary" />
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+              <Icon name="ph:map-pin" class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
             </div>
-            <div>
-              <h4 class="font-semibold text-dark dark:text-dark-text">Phone</h4>
-              <p class="text-gray-text dark:text-gray-dark">+1 (555) 000-0000</p>
+            <div class="min-w-0">
+              <h4 class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">Location</h4>
+              <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark">Available remotely — we work with clients worldwide</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-3 sm:gap-4">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center shrink-0">
+              <Icon name="ph:phone-call" class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
+            </div>
+            <div class="min-w-0">
+              <h4 class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">Phone</h4>
+              <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark">+1 (555) 000-0000</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div data-aos="fade-left" class="bg-bg dark:bg-card-dark rounded-2xl p-8 border border-primary/10 dark:border-white/5">
-        <form id="contact-form" class="space-y-5">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+      <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" class="bg-bg dark:bg-card-dark rounded-2xl p-5 sm:p-6 lg:p-8 border border-primary/10 dark:border-white/5">
+        <form id="contact-form" class="space-y-4 sm:space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
               <label for="name" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Name</label>
               <input
@@ -55,7 +55,7 @@ import { Icon } from 'astro-icon/components';
                 id="name"
                 name="name"
                 required
-                class="w-full px-4 py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 placeholder="Your name"
               />
             </div>
@@ -66,7 +66,7 @@ import { Icon } from 'astro-icon/components';
                 id="email"
                 name="email"
                 required
-                class="w-full px-4 py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                 placeholder="your@email.com"
               />
             </div>
@@ -78,7 +78,7 @@ import { Icon } from 'astro-icon/components';
               id="subject"
               name="subject"
               required
-              class="w-full px-4 py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
               placeholder="Project subject"
             />
           </div>
@@ -89,13 +89,13 @@ import { Icon } from 'astro-icon/components';
               name="message"
               rows="4"
               required
-              class="w-full px-4 py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
+              class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
               placeholder="Tell us about your project..."
             ></textarea>
           </div>
           <button
             type="submit"
-            class="w-full bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-xl text-lg font-semibold transition-all hover:shadow-lg hover:shadow-primary/30"
+            class="w-full bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl text-base sm:text-lg font-semibold transition-all hover:shadow-lg hover:shadow-primary/30 min-h-[48px]"
           >
             Send Message
           </button>
