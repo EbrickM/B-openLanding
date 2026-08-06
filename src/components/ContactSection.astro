@@ -6,90 +6,95 @@ import { Icon } from 'astro-icon/components';
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-start lg:items-center">
       <div data-aos="fade-up" data-aos-duration="500">
-        <span class="inline-flex items-center px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">Contact Us</span>
-        <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-dark dark:text-dark-text px-2 sm:px-0">Get in <span class="text-primary">Touch</span></h2>
-        <div class="w-20 sm:w-24 h-1.5 bg-primary mt-4 sm:mt-5 rounded-full"></div>
-        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed px-2 sm:px-0">
-          Have a project in mind? Let's talk about it. We'd love to hear from you and discuss how we can help bring your ideas to life.
+        <span data-i18n="contact.badge" class="inline-flex items-center px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">Contáctanos</span>
+        <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-dark dark:text-dark-text px-2 sm:px-0"><span data-i18n="contact.title.pre">Ponte en</span> <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-i18n="contact.title.highlight">Contacto</span></h2>
+        <div class="w-20 sm:w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mt-4 sm:mt-5 rounded-full"></div>
+        <p data-i18n="contact.subtitle" class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed px-2 sm:px-0">
+          ¿Tienes un proyecto en mente? Hablemos de ello. Nos encantaría saber de ti y conversar sobre cómo podemos ayudarte a hacer realidad tus ideas.
         </p>
 
-        <div class="mt-8 sm:mt-10 space-y-4 sm:space-y-6 flex flex-col items-center px-2 sm:px-0">
-          <a href="mailto:bopenweb@gmail.com" class="group w-full max-w-sm flex items-center gap-3 sm:gap-4 no-underline">
-            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 group-hover:bg-primary/20 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+        <div class="mt-8 sm:mt-10 space-y-6 sm:space-y-8 flex flex-col items-center px-2 sm:px-0">
+          <a href="mailto:bopenweb@gmail.com" class="group w-full max-w-sm flex items-center gap-3 sm:gap-4 no-underline rounded-xl border border-primary/10 dark:border-white/5 bg-white/60 dark:bg-card-dark/60 backdrop-blur-sm p-3.5 sm:p-4 shadow-sm hover:border-primary/30 hover:shadow-md hover:shadow-primary/10 transition-all">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-primary/20 to-secondary/10 group-hover:from-primary/30 group-hover:to-secondary/20 rounded-xl flex items-center justify-center shrink-0 transition-colors">
               <Icon name="ph:envelope" class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
             </div>
             <div class="min-w-0">
-              <h4 class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">Email</h4>
+              <h4 data-i18n="contact.email.label" class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">Correo</h4>
               <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark break-all group-hover:text-primary transition-colors">bopenweb@gmail.com</p>
             </div>
           </a>
 
-          <a href="https://wa.me/5355028601" target="_blank" rel="noopener noreferrer" class="group w-full max-w-sm flex items-center gap-3 sm:gap-4 no-underline">
-            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 group-hover:bg-primary/20 rounded-xl flex items-center justify-center shrink-0 transition-colors">
+          <a href="https://wa.me/5355028601" target="_blank" rel="noopener noreferrer" class="group w-full max-w-sm flex items-center gap-3 sm:gap-4 no-underline rounded-xl border border-primary/10 dark:border-white/5 bg-white/60 dark:bg-card-dark/60 backdrop-blur-sm p-3.5 sm:p-4 shadow-sm hover:border-primary/30 hover:shadow-md hover:shadow-primary/10 transition-all">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-gradient-to-br from-primary/20 to-secondary/10 group-hover:from-primary/30 group-hover:to-secondary/20 rounded-xl flex items-center justify-center shrink-0 transition-colors">
               <Icon name="ph:whatsapp-logo" class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
             </div>
             <div class="min-w-0">
-              <h4 class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">WhatsApp</h4>
+              <h4 data-i18n="contact.whatsapp.label" class="text-sm sm:text-base font-semibold text-dark dark:text-dark-text">WhatsApp</h4>
               <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark break-all group-hover:text-primary transition-colors">+53 5502 8601</p>
             </div>
           </a>
         </div>
       </div>
 
-      <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" class="bg-bg dark:bg-card-dark rounded-2xl p-5 sm:p-6 lg:p-8 border border-primary/10 dark:border-white/5">
+      <div data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" class="bg-bg dark:bg-card-dark rounded-2xl p-5 sm:p-6 lg:p-8 border border-primary/10 dark:border-white/5 shadow-sm dark:shadow-black/20">
         <form id="contact-form" class="space-y-4 sm:space-y-5">
           <input type="hidden" name="botcheck" id="botcheck" />
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             <div>
-              <label for="name" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Name</label>
+              <label for="name" data-i18n="contact.form.name.label" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Nombre</label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
                 class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="Your name"
+                placeholder="Tu nombre"
+                data-i18n-placeholder="contact.form.name.placeholder"
               />
             </div>
             <div>
-              <label for="email" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Email</label>
+              <label for="email" data-i18n="contact.form.email.label" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Correo</label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
                 class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-                placeholder="your@email.com"
+                placeholder="tu@correo.com"
+                data-i18n-placeholder="contact.form.email.placeholder"
               />
             </div>
           </div>
           <div>
-            <label for="subject" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Subject</label>
+            <label for="subject" data-i18n="contact.form.subject.label" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Asunto</label>
             <input
               type="text"
               id="subject"
               name="subject"
               required
               class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
-              placeholder="Project subject"
+              placeholder="Asunto del proyecto"
+              data-i18n-placeholder="contact.form.subject.placeholder"
             />
           </div>
           <div>
-            <label for="message" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Message</label>
+            <label for="message" data-i18n="contact.form.message.label" class="block text-sm font-medium text-dark dark:text-dark-text mb-1.5">Mensaje</label>
             <textarea
               id="message"
               name="message"
               rows="4"
               required
               class="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl border border-primary/20 dark:border-white/10 bg-white dark:bg-surface-dark text-sm sm:text-base text-dark dark:text-dark-text placeholder-gray-400 dark:placeholder-gray-dark focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all resize-none"
-              placeholder="Tell us about your project..."
+              placeholder="Cuéntanos sobre tu proyecto..."
+              data-i18n-placeholder="contact.form.message.placeholder"
             ></textarea>
           </div>
           <button
             type="submit"
-            class="w-full bg-primary hover:bg-primary-dark text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl text-base sm:text-lg font-semibold transition-all hover:shadow-lg hover:shadow-primary/30 min-h-[48px] disabled:opacity-60 disabled:cursor-not-allowed"
+            data-i18n="contact.form.submit"
+            class="w-full bg-gradient-to-r from-primary to-secondary hover:brightness-110 text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-xl text-base sm:text-lg font-semibold transition-all hover:shadow-lg hover:shadow-primary/30 min-h-[48px] disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Send Message
+            Enviar Mensaje
           </button>
           <div id="form-status" role="status" aria-live="polite" class="hidden text-sm sm:text-base text-center rounded-xl px-4 py-3"></div>
         </form>
@@ -99,10 +104,15 @@ import { Icon } from 'astro-icon/components';
 </section>
 
 <script>
+  import { translate } from '../i18n/translations.js';
+
   const form = document.getElementById('contact-form');
   const submitBtn = form?.querySelector('button[type="submit"]');
   const statusEl = document.getElementById('form-status');
   const accessKey = import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY;
+
+  const currentLang = () => document.documentElement.lang === 'en' ? 'en' : 'es';
+  const t = (key) => translate(currentLang(), key);
 
   const showStatus = (message, isError = false) => {
     if (!statusEl) return;
@@ -119,13 +129,13 @@ import { Icon } from 'astro-icon/components';
     e.preventDefault();
 
     if (!accessKey) {
-      showStatus('Form is not configured yet. Please set PUBLIC_WEB3FORMS_ACCESS_KEY in your .env file.', true);
+      showStatus(t('contact.form.error.notConfigured'), true);
       return;
     }
 
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.textContent = 'Sending...';
+      submitBtn.textContent = t('contact.form.sending');
     }
 
     const botcheck = document.getElementById('botcheck');
@@ -136,10 +146,10 @@ import { Icon } from 'astro-icon/components';
     formData.append('subject', `New message from ${name}: ${formData.get('subject')}`);
 
     if (botcheck && botcheck.value) {
-      showStatus('Submission failed. Please try again.', true);
+      showStatus(t('contact.form.error.botcheck'), true);
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = t('contact.form.submit');
       }
       return;
     }
@@ -152,16 +162,16 @@ import { Icon } from 'astro-icon/components';
       const data = await response.json();
       if (data.success) {
         form.reset();
-        showStatus('Your message has been sent to bopenweb@gmail.com. We will get back to you soon!');
+        showStatus(t('contact.form.success'));
       } else {
-        showStatus(data.message || 'There was an error sending your message. Please try again.', true);
+        showStatus(data.message || t('contact.form.error.generic'), true);
       }
     } catch (err) {
-      showStatus('There was an error sending your message. Please try again.', true);
+      showStatus(t('contact.form.error.generic'), true);
     } finally {
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Message';
+        submitBtn.textContent = t('contact.form.submit');
       }
     }
   });

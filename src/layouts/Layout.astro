@@ -2,7 +2,7 @@
 import '../styles/global.css';
 ---
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
@@ -12,7 +12,7 @@ import '../styles/global.css';
 		<link rel="icon" href="/favicon.ico" />
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
 		<meta name="generator" content={Astro.generator} />
 		<title>B-Open - Software Development</title>
 	</head>
@@ -26,6 +26,7 @@ import '../styles/global.css';
 
 <script>
 	import AOS from 'aos';
+	import { initLanguage } from '../i18n/apply.js';
 
 	const html = document.documentElement;
 	const stored = localStorage.getItem('theme');
@@ -35,6 +36,8 @@ import '../styles/global.css';
 	} else {
 		html.classList.remove('dark');
 	}
+
+	initLanguage();
 
 	document.addEventListener('astro:after-swap', () => {
 		AOS.refresh();

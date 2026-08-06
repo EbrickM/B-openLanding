@@ -3,47 +3,80 @@ import logo from '../assets/logo v2.svg';
 import { Icon } from 'astro-icon/components';
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-surface-dark/90 backdrop-blur-md border-b border-primary/10 dark:border-white/10">
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-surface-dark/80 backdrop-blur-md border-b border-primary/10 dark:border-white/5 shadow-sm dark:shadow-black/20">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16">
-      <a href="/" class="flex items-center">
+      <a href="/" class="flex items-center shrink-0 cursor-pointer transition-transform hover:scale-[1.03]">
         <img src={logo.src} alt="B-Open" class="h-12 w-auto" />
       </a>
-      <div id="desktop-nav" class="hidden md:flex items-center gap-8 relative">
-        <a href="#hero" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5"><Icon name="ph:house" class="w-4 h-4" />Home</a>
-        <a href="#about" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5"><Icon name="ph:info" class="w-4 h-4" />About</a>
-        <a href="#projects" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5"><Icon name="ph:folder-open" class="w-4 h-4" />Projects</a>
-        <a href="#contact" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5"><Icon name="ph:envelope-simple" class="w-4 h-4" />Contact</a>
-        <div id="nav-indicator" class="absolute bottom-0 h-0.5 bg-primary rounded-full transition-all duration-300 ease-out" style="left: 0; width: 0;"></div>
-        <button id="theme-toggle" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors" aria-label="Toggle theme">
-          <Icon name="ph:sun" class="w-5 h-5 hidden dark:block" />
-          <Icon name="ph:moon" class="w-5 h-5 block dark:hidden" />
-        </button>
-        <a href="#contact" class="bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full transition-colors font-medium">Get in Touch</a>
+      <div id="desktop-nav" class="hidden md:flex items-center gap-7 relative">
+        <a href="#hero" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Icon name="ph:house" class="w-4 h-4" /><span data-i18n="nav.home">Inicio</span></a>
+        <a href="#about" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Icon name="ph:info" class="w-4 h-4" /><span data-i18n="nav.about">Nosotros</span></a>
+        <a href="#projects" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Icon name="ph:folder-open" class="w-4 h-4" /><span data-i18n="nav.projects">Proyectos</span></a>
+        <a href="#contact" data-nav class="text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold inline-flex items-center gap-1.5 cursor-pointer"><Icon name="ph:envelope-simple" class="w-4 h-4" /><span data-i18n="nav.contact">Contacto</span></a>
+        <div id="nav-indicator" class="absolute bottom-0 h-0.5 bg-gradient-to-r from-primary to-secondary rounded-full transition-all duration-300 ease-out" style="left: 0; width: 0;"></div>
+
+        <div class="flex items-center gap-1.5 pl-2 border-l border-primary/10 dark:border-white/10">
+          <div class="relative flex items-center">
+            <Icon name="ph:globe" class="w-4 h-4 absolute left-2.5 text-primary pointer-events-none" />
+            <select
+              id="lang-select"
+              data-lang-select
+              data-i18n-aria-label="nav.lang"
+              aria-label="Cambiar idioma"
+              class="appearance-none bg-primary/5 dark:bg-white/5 hover:bg-primary/10 dark:hover:bg-white/10 pl-8 pr-6 py-2 rounded-full text-xs font-bold tracking-wide text-gray-text dark:text-gray-dark hover:text-primary cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+            >
+              <option value="es">ES</option>
+              <option value="en">EN</option>
+            </select>
+            <Icon name="ph:caret-down" class="w-3 h-3 absolute right-2 text-gray-text dark:text-gray-dark pointer-events-none" />
+          </div>
+          <button id="theme-toggle" data-i18n-aria-label="nav.theme" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors cursor-pointer" aria-label="Cambiar tema">
+            <Icon name="ph:sun" class="w-5 h-5 hidden dark:block" />
+            <Icon name="ph:moon" class="w-5 h-5 block dark:hidden" />
+          </button>
+        </div>
+
+        <a href="#contact" class="cursor-pointer bg-gradient-to-r from-primary to-secondary hover:brightness-110 text-white px-5 py-2.5 rounded-full transition-all font-medium shadow-md shadow-primary/20 hover:shadow-lg hover:shadow-primary/30"><span data-i18n="nav.cta">Hablemos</span></a>
       </div>
-      <div class="flex items-center gap-2 md:hidden">
-        <button id="theme-toggle-mobile" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors" aria-label="Toggle theme">
+      <div class="flex items-center gap-1 md:hidden">
+        <div class="relative flex items-center">
+          <Icon name="ph:globe" class="w-4 h-4 absolute left-2 text-primary pointer-events-none" />
+          <select
+            id="lang-select-mobile"
+            data-lang-select
+            data-i18n-aria-label="nav.lang"
+            aria-label="Cambiar idioma"
+            class="appearance-none bg-primary/5 dark:bg-white/5 pl-7 pr-5 py-2 rounded-full text-xs font-bold tracking-wide text-gray-text dark:text-gray-dark cursor-pointer focus:outline-none focus:ring-2 focus:ring-primary/40 transition-colors"
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+        </div>
+        <button id="theme-toggle-mobile" data-i18n-aria-label="nav.theme" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors cursor-pointer" aria-label="Cambiar tema">
           <Icon name="ph:sun" class="w-5 h-5 hidden dark:block" />
           <Icon name="ph:moon" class="w-5 h-5 block dark:hidden" />
         </button>
-        <button id="menu-btn" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors">
+        <button id="menu-btn" class="p-2 text-gray-text dark:text-gray-dark hover:text-primary transition-colors cursor-pointer" aria-label="Abrir menú">
           <Icon name="ph:list" class="w-6 h-6" />
         </button>
       </div>
     </div>
   </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-surface-dark border-t border-primary/10 dark:border-white/10">
+  <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-surface-dark border-t border-primary/10 dark:border-white/5">
     <div class="px-4 py-4 space-y-3">
-      <a href="#hero" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold"><Icon name="ph:house" class="w-4 h-4" />Home</a>
-      <a href="#about" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold"><Icon name="ph:info" class="w-4 h-4" />About</a>
-      <a href="#projects" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold"><Icon name="ph:folder-open" class="w-4 h-4" />Projects</a>
-      <a href="#contact" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold"><Icon name="ph:envelope-simple" class="w-4 h-4" />Contact</a>
-      <a href="#contact" class="block text-center bg-primary hover:bg-primary-dark text-white px-5 py-2.5 rounded-full transition-colors font-medium">Get in Touch</a>
+      <a href="#hero" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold cursor-pointer"><Icon name="ph:house" class="w-4 h-4" /><span data-i18n="nav.home">Inicio</span></a>
+      <a href="#about" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold cursor-pointer"><Icon name="ph:info" class="w-4 h-4" /><span data-i18n="nav.about">Nosotros</span></a>
+      <a href="#projects" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold cursor-pointer"><Icon name="ph:folder-open" class="w-4 h-4" /><span data-i18n="nav.projects">Proyectos</span></a>
+      <a href="#contact" data-nav class="flex items-center gap-1.5 text-gray-text dark:text-gray-dark hover:text-primary transition-colors font-semibold cursor-pointer"><Icon name="ph:envelope-simple" class="w-4 h-4" /><span data-i18n="nav.contact">Contacto</span></a>
+      <a href="#contact" class="block text-center cursor-pointer bg-gradient-to-r from-primary to-secondary hover:brightness-110 text-white px-5 py-2.5 rounded-full transition-all font-medium shadow-md shadow-primary/20"><span data-i18n="nav.cta">Hablemos</span></a>
     </div>
   </div>
 </nav>
 
 <script>
+  import { applyLanguage } from '../i18n/apply.js';
+
   const toggleTheme = () => {
     const html = document.documentElement;
     html.classList.toggle('dark');
@@ -52,6 +85,12 @@ import { Icon } from 'astro-icon/components';
 
   document.querySelectorAll('#theme-toggle, #theme-toggle-mobile').forEach(btn => {
     btn?.addEventListener('click', toggleTheme);
+  });
+
+  document.querySelectorAll('[data-lang-select]').forEach((select) => {
+    select.addEventListener('change', (e) => {
+      applyLanguage(e.target.value);
+    });
   });
 
   const menuBtn = document.getElementById('menu-btn');

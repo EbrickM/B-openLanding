@@ -6,26 +6,30 @@ import proyectoBonafide from '../assets/Bonafide.webp';
 
 const projects = [
   {
+    key: 'tropical',
     title: 'Tropical Moving Solutions',
-    description: 'A complete digital platform for a moving company with online quotes, scheduling, and real-time tracking.',
+    description: 'Una plataforma digital completa para una empresa de mudanzas con cotizaciones en línea, programación y seguimiento en tiempo real.',
     image: proyectoTropical,
     tags: ['React', 'Node.js', 'MongoDB'],
   },
   {
+    key: 'selenium',
     title: 'Selenium Testing Platform',
-    description: 'An automated testing framework and dashboard for managing Selenium test suites across multiple environments.',
+    description: 'Un framework de pruebas automatizadas y panel de control para gestionar suites de pruebas Selenium en múltiples entornos.',
     image: proyectoSelenium,
     tags: ['Python', 'Selenium', 'Docker'],
   },
   {
+    key: 'ciencia',
     title: 'Ciencia en Cuba',
-    description: 'A scientific research portal connecting Cuban researchers with international collaborators and funding opportunities.',
+    description: 'Un portal de investigación científica que conecta a investigadores cubanos con colaboradores y oportunidades de financiamiento internacionales.',
     image: proyectoCiencia,
     tags: ['Vue.js', 'FastAPI', 'PostgreSQL'],
   },
   {
+    key: 'bonafide',
     title: 'Bonafide',
-    description: 'A verification and authentication system for professional credentials and certifications.',
+    description: 'Sistema completo y multiplataforma de transacciones monetarias internacionales de una entidad bancaria radicada en Guinea Ecuatorial.',
     image: proyectoBonafide,
     tags: ['Next.js', 'TypeScript', 'AWS'],
   },
@@ -35,11 +39,11 @@ const projects = [
 <section id="projects" class="py-16 sm:py-20 lg:py-28 bg-bg dark:bg-surface-dark">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div data-aos="fade-up" class="text-center max-w-3xl mx-auto px-2 sm:px-0">
-      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">Our Portfolio</span>
-      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-dark dark:text-dark-text">Our <span class="text-primary">Projects</span></h2>
-      <div class="w-20 sm:w-24 h-1.5 bg-primary mx-auto mt-4 sm:mt-5 rounded-full"></div>
-      <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed max-w-2xl mx-auto">
-        Take a look at some of the projects we've delivered. Each one represents our commitment to quality and innovation.
+      <span data-i18n="projects.badge" class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">Nuestro Portafolio</span>
+      <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-dark dark:text-dark-text"><span data-i18n="projects.title.pre">Nuestros</span> <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-i18n="projects.title.highlight">Proyectos</span></h2>
+      <div class="w-20 sm:w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 sm:mt-5 rounded-full"></div>
+      <p data-i18n="projects.subtitle" class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed max-w-2xl mx-auto">
+        Echa un vistazo a algunos de los proyectos que hemos entregado. Cada uno representa nuestro compromiso con la calidad y la innovación.
       </p>
     </div>
 
@@ -48,9 +52,9 @@ const projects = [
         <div
           data-aos="fade-up"
           data-aos-delay={150 * (index + 1)}
-          class="group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-primary/10 dark:border-white/5 hover:shadow-xl hover:shadow-primary/10 transition-all cursor-pointer flex flex-col"
+          class="group bg-white dark:bg-card-dark rounded-2xl overflow-hidden border border-primary/10 dark:border-white/5 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-primary/15 dark:hover:shadow-primary/5 hover:border-primary/30 dark:hover:border-primary/20 transition-all cursor-pointer flex flex-col"
         >
-          <div class="overflow-hidden aspect-[16/10] sm:aspect-[16/9]">
+          <div class="overflow-hidden aspect-[16/10] sm:aspect-[16/9] relative">
             <img
               src={project.image.src}
               alt={project.title}
@@ -58,10 +62,11 @@ const projects = [
               decoding="async"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
+            <div class="absolute inset-0 bg-gradient-to-t from-dark/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
           </div>
           <div class="p-5 sm:p-6 flex flex-col flex-1">
-            <h3 class="text-lg sm:text-xl font-bold text-dark dark:text-dark-text mb-2">{project.title}</h3>
-            <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark mb-4 leading-relaxed flex-1">{project.description}</p>
+            <h3 class="text-lg sm:text-xl font-bold text-dark dark:text-dark-text mb-2 group-hover:text-primary transition-colors">{project.title}</h3>
+            <p data-i18n={`projects.item.${project.key}.description`} class="text-sm sm:text-base text-gray-text dark:text-gray-dark mb-4 leading-relaxed flex-1">{project.description}</p>
             <div class="flex flex-wrap gap-1.5 sm:gap-2 mt-auto">
               {project.tags.map((tag) => (
                 <span class="bg-primary/10 text-primary text-xs sm:text-sm font-medium px-2.5 sm:px-3 py-1 rounded-full">{tag}</span>

@@ -4,33 +4,39 @@ import { Icon } from 'astro-icon/components';
 const features = [
   {
     icon: 'ph:monitor',
-    title: 'Web Development',
-    description: 'Modern, responsive, and high-performance web applications using cutting-edge technologies.',
+    key: 'web',
+    title: 'Desarrollo Web',
+    description: 'Aplicaciones web modernas, responsivas y de alto rendimiento usando tecnología de vanguardia.',
   },
   {
     icon: 'ph:device-mobile',
-    title: 'Mobile Apps',
-    description: 'Cross-platform mobile applications that deliver native-like experiences on any device.',
+    key: 'mobile',
+    title: 'Apps Móviles',
+    description: 'Aplicaciones móviles multiplataforma que ofrecen experiencias nativas en cualquier dispositivo.',
   },
   {
     icon: 'ph:shield-check',
-    title: 'Quality Assurance',
-    description: 'Comprehensive testing and quality assurance to ensure your software is reliable and robust.',
+    key: 'qa',
+    title: 'Control de Calidad',
+    description: 'Pruebas y control de calidad exhaustivos para garantizar un software confiable y robusto.',
   },
   {
     icon: 'ph:palette',
-    title: 'UI/UX Design',
-    description: 'Intuitive, user-centered interfaces designed to delight users and drive engagement.',
+    key: 'design',
+    title: 'Diseño UI/UX',
+    description: 'Interfaces intuitivas centradas en el usuario, diseñadas para cautivar e impulsar la interacción.',
   },
   {
-    icon: 'ph:cloud',
-    title: 'Cloud & DevOps',
-    description: 'Scalable cloud infrastructure and automated pipelines for faster, safer releases.',
+    icon: 'ph:robot',
+    key: 'cloud',
+    title: 'Automatizaciones e Integración con IA',
+    description: 'Automatizamos procesos repetitivos e integramos inteligencia artificial en tus herramientas para optimizar la operación de tu negocio.',
   },
   {
     icon: 'ph:wrench',
-    title: 'Maintenance & Support',
-    description: 'Ongoing monitoring, updates, and support to keep your products running smoothly.',
+    key: 'support',
+    title: 'Mantenimiento y Soporte',
+    description: 'Monitoreo, actualizaciones y soporte continuo para que tus productos funcionen sin problemas.',
   },
 ];
 ---
@@ -39,32 +45,32 @@ const features = [
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-[2fr_3fr] gap-10 sm:gap-12 lg:gap-16 items-start">
       <div data-aos="fade-up" data-aos-duration="500" class="lg:sticky lg:top-24">
-        <span class="inline-flex items-center px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">About B-Open</span>
+        <span data-i18n="about.badge" class="inline-flex items-center px-3.5 py-1 rounded-full bg-primary/10 text-primary text-xs sm:text-sm font-semibold uppercase tracking-widest">Sobre B-Open</span>
         <h2 class="mt-4 text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-dark dark:text-dark-text leading-tight">
-          Turning Ideas into Powerful <span class="text-primary">Digital Products</span>
+          <span data-i18n="about.title.pre">Convertimos Ideas en</span> <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-i18n="about.title.highlight">Productos Digitales Poderosos</span>
         </h2>
-        <div class="w-20 sm:w-24 h-1.5 bg-primary mt-4 sm:mt-5 rounded-full"></div>
-        <p class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed">
-          We are a passionate team of developers, designers, and visionaries dedicated to crafting exceptional software experiences. From startups to enterprises, we help businesses transform their ideas into powerful digital products.
+        <div class="w-20 sm:w-24 h-1.5 bg-gradient-to-r from-primary to-secondary mt-4 sm:mt-5 rounded-full"></div>
+        <p data-i18n="about.description" class="mt-4 sm:mt-6 text-base sm:text-lg text-gray-text dark:text-gray-dark leading-relaxed">
+          Somos un equipo apasionado de desarrolladores, diseñadores y visionarios dedicados a crear experiencias de software excepcionales. Desde startups hasta empresas consolidadas, ayudamos a los negocios a transformar sus ideas en productos digitales poderosos.
         </p>
         <div class="mt-8 grid grid-cols-3 gap-3 sm:gap-4">
-          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5">
-            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-primary/15 rounded-xl flex items-center justify-center mx-auto">
-              <Icon name="ph:shield-check" class="w-6 sm:w-7 h-6 sm:h-7 text-dark dark:text-dark-text" />
+          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/20 transition-colors">
+            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-xl flex items-center justify-center mx-auto">
+              <Icon name="ph:shield-check" class="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
             </div>
-            <div class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Reliable</div>
+            <div data-i18n="about.trait.reliable" class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Confiable</div>
           </div>
-          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5">
-            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-primary/15 rounded-xl flex items-center justify-center mx-auto">
-              <Icon name="ph:lightning" class="w-6 sm:w-7 h-6 sm:h-7 text-dark dark:text-dark-text" />
+          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/20 transition-colors">
+            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-xl flex items-center justify-center mx-auto">
+              <Icon name="ph:lightning" class="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
             </div>
-            <div class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Dynamic</div>
+            <div data-i18n="about.trait.dynamic" class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Dinámico</div>
           </div>
-          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5">
-            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-primary/15 rounded-xl flex items-center justify-center mx-auto">
-              <Icon name="ph:lock" class="w-6 sm:w-7 h-6 sm:h-7 text-dark dark:text-dark-text" />
+          <div class="bg-bg dark:bg-card-dark rounded-xl p-3 sm:p-4 text-center border border-primary/10 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/20 transition-colors">
+            <div class="w-12 sm:w-14 h-12 sm:h-14 bg-gradient-to-br from-primary/20 to-secondary/10 rounded-xl flex items-center justify-center mx-auto">
+              <Icon name="ph:lock" class="w-6 sm:w-7 h-6 sm:h-7 text-primary" />
             </div>
-            <div class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Secure</div>
+            <div data-i18n="about.trait.secure" class="text-xs sm:text-sm font-bold text-dark dark:text-dark-text mt-2">Seguro</div>
           </div>
         </div>
       </div>
@@ -75,13 +81,13 @@ const features = [
             data-aos="scale-in"
             data-aos-duration="600"
             data-aos-delay={index * 100}
-            class="group bg-bg dark:bg-card-dark rounded-2xl p-5 sm:p-6 hover:shadow-lg hover:shadow-primary/10 transition-all border border-primary/10 dark:border-white/5"
+            class="group bg-bg dark:bg-card-dark rounded-2xl p-5 sm:p-6 hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/10 dark:hover:shadow-primary/5 transition-all border border-primary/10 dark:border-white/5 hover:border-primary/30 dark:hover:border-primary/20"
           >
-            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 transition-colors">
+            <div class="w-10 sm:w-12 h-10 sm:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-3 sm:mb-4 group-hover:bg-primary/20 group-hover:scale-110 transition-all">
               <Icon name={feature.icon} class="w-5 sm:w-6 h-5 sm:h-6 text-primary" />
             </div>
-            <h3 class="text-base sm:text-lg font-bold text-dark dark:text-dark-text mb-1.5 sm:mb-2">{feature.title}</h3>
-            <p class="text-sm sm:text-base text-gray-text dark:text-gray-dark leading-relaxed">{feature.description}</p>
+            <h3 data-i18n={`about.feature.${feature.key}.title`} class="text-base sm:text-lg font-bold text-dark dark:text-dark-text mb-1.5 sm:mb-2">{feature.title}</h3>
+            <p data-i18n={`about.feature.${feature.key}.description`} class="text-sm sm:text-base text-gray-text dark:text-gray-dark leading-relaxed">{feature.description}</p>
           </div>
         ))}
       </div>
